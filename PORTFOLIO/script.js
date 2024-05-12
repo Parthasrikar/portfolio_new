@@ -337,13 +337,46 @@ function page4text() {
     })
 }
 
+let slider = document.querySelector(".options");
+let menu = document.querySelector("nav .part3");
+let menuClose = document.querySelector(".options i")
+
+let menutime = gsap.timeline();
+menutime.from(slider, {
+    x: 400,
+    duration: 0.5,
+    ease: "power3.out"
+})
+
+menutime.from(".options ul li, .options i", {
+    x: 100,
+    duration: 0.5,
+    opacity: 0,
+    stagger: 0.3,
+    ease: "power3.out"
+})
+
+menutime.pause();
+menu.addEventListener("click", function() {
+    slider.style.display = "flex";
+    menutime.play();
+})
+
+menuClose.addEventListener("click", function() {
+    menutime.reverse();
+    setTimeout(() => {
+        slider.style.display = "none";
+    }, 2000)
+})
+
 
 
 page1()
-if(screen.width > 500) {
+if(screen.width > 550) {
     page2()
     page2text()
     page4text()
+    console.log(screen.width);
 }
 if(screen.width < 500) {
     gsap.to(".marquee", {

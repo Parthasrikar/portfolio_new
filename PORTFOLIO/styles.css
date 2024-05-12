@@ -76,6 +76,40 @@ section {
 #page1 {
     min-height: 100vh;
     position: relative;
+    .options {
+        width: 90%;
+        height: 90%;
+        background-color: #ffffff80;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        margin: 5%;
+        display: flex;
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5vh;
+        ul {
+            list-style: none;
+            li a {
+                text-decoration: none;
+                color: var(--dark);
+                text-transform: capitalize;
+                font-family: main;
+                font-size: 15vw;
+                padding-top: 3vh;
+            }
+            i {
+                font-size: 10vw;
+                color: var(--dark);
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 2vh;
+            }
+        }
+    }
   nav {
     display: flex;
     align-items: center;
@@ -687,7 +721,7 @@ footer {
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 550px) {
     section {
         min-height: 60vh;
         width: 100%;
@@ -1019,5 +1053,70 @@ footer {
         }
     
     }
+
+
+    #page4 {
+        min-height: 60vh;
+        padding: 5vw;
+        h2 {
+
+            font-size: 9vw;
+            text-transform: capitalize;
+            padding-bottom: 1vh;
+        }
+        h6 {
+            font-size: 10vw;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            gap: 2vw;
+            color: var(--primary);
     
+            .inp {
+                width: 100%;
+            }
+            input[type="submit"] {
+                display: inline-block;
+                padding: 1vh 2vh;
+                margin-top: 2vw;
+                border-radius: 1vh;
+                background-color: var(--secondary4);
+                color: var(--primary);
+            }
+            textarea {
+                width: 100%;
+                border-radius: 5vw;
+                border: none;
+                padding: 0.5vw;
+                color: var(--dark);
+                background-color: var(--primary);
+            }
+            input[type="email"],input[type="text"] {
+                width: 100%;
+                border-radius: 5vw;
+                border: none;
+                padding: 1vh 2vh;
+            }
+
+        }
+    }
+    
+    footer {
+
+        min-height: 18vh;
+        border-radius: 5vw;
+        .logos {
+            z-index: 10;
+            font-size: 10vw;
+            i {
+                padding: 5vw;
+                color: var(--primary);
+                transition: 0.4s linear;
+                cursor: pointer;
+            }
+
+        }
+    }
   }
