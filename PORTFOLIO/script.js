@@ -217,7 +217,7 @@ function clickproject() {
         wrapper.reverse();
         setTimeout(() => {
             inproject.style.zIndex = 1;
-        },2500)
+        },2100)
     })
     
 }
@@ -261,28 +261,30 @@ function textScroll() {
 
 
 window.addEventListener("wheel", (e)=> {
-    if(e.deltaY > 0 ){
-        gsap.to(".marquee", {
-            transform: "translateX(-200%)",
-            repeat: -1,
-            duration: 4,
-            ease: "none"
-        })
-        gsap.to(".marquee i", {
-            rotate: 0
-        })
-    }
-    else {
-        gsap.to(".marquee i", {
-            rotate: 180
-        })
-        gsap.to(".marquee", {
-            transform: "translateX(0)",
-            repeat: -1,
-            duration: 4,
-            ease: "none"
-        })
-        
+    // console.log(e);
+    if(screen.width > 480) {
+        if(e.deltaY > 0 ){
+            gsap.to(".marquee", {
+                transform: "translateX(-200%)",
+                repeat: -1,
+                duration: 4,
+                ease: "none"
+            })
+            gsap.to(".marquee i", {
+                rotate: 0
+            })
+        }
+        else if(e.deltaY < 0) {
+            gsap.to(".marquee i", {
+                rotate: 180
+            })
+            gsap.to(".marquee", {
+                transform: "translateX(0)",
+                repeat: -1,
+                duration: 4,
+                ease: "none"
+            })     
+        }
     }
 })
 
@@ -321,7 +323,6 @@ function page4text() {
             clutter += `<span>${c}</span>`;
         })
         text.innerHTML = clutter;
-        console.log(text);
     
     gsap.to("#page4 h6 span", {
         color: "#FFD0D0",
@@ -336,10 +337,22 @@ function page4text() {
     })
 }
 
+
+
 page1()
-page2()
-page2text()
-page4text()
+if(screen.width > 500) {
+    page2()
+    page2text()
+    page4text()
+}
+if(screen.width < 500) {
+    gsap.to(".marquee", {
+        transform: "translateX(0%)",
+        repeat: -1,
+        duration: 5,
+        ease: "none"
+    })
+}
 upmotion()
 textScroll()
 clickproject()
