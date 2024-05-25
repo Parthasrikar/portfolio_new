@@ -862,6 +862,7 @@ footer {
             .card {
                 width: 45%;
                 height: 20vh;
+                border-radius: 2vw;
                 i {
                     font-size: 10vw;
                         padding: 1vh;
