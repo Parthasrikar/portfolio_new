@@ -861,9 +861,9 @@ footer {
             gap: 5vw;
             .card {
                 width: 45%;
-                height: 23vh;
+                height: 27vh;
                 border-radius: 2vw;
-                padding: 1.5vw;
+                padding: 1.4vw;
                 gap: 0.5vw;
                 i {
                     font-size: 7vw;
@@ -871,7 +871,7 @@ footer {
 
                 }
                 h4 {
-                    font-size: 6vw;
+                    font-size: 5vw;
                     font-weight: 600;
                     padding-top: 1vw;
                 }
