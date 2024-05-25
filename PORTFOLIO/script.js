@@ -135,48 +135,56 @@ function clickproject() {
             id: 0,
             project_title : "edu hub",
             img: "./edu.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores."
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores.",
+            link: "https://parthasrikar.github.io/web_projects/final%20pro/"
         }, 
         {
             id: 1,
             project_title : "obys clone",
             img: "./obys-clone.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores."
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores.",
+            link: "https://parthasrikar.github.io/obys-agency_project/"
         },
         {
             id: 2,
             project_title : "edu hub",
             img: "./edu.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores."
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores.",
+            link: "https://parthasrikar.github.io/web_projects/final%20pro/"
         },{
             id: 3,
             project_title : "edu hub",
             img: "./edu.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores."
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores.",
+            link: "https://parthasrikar.github.io/web_projects/final%20pro/"
         },
         {
             id: 4,
             project_title : "apple clone",
             img: "./apple-clone.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores."
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores.",
+            link: "https://parthasrikar.github.io/apple_clone/"
         },
         {
             id: 5,
             project_title : "html canvas",
             img: "./galectic.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores."
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores.",
+            link: "https://parthasrikar.github.io/galectic_canvas/"
         },
         {
             id: 6,
             project_title : "primer clone",
             img: "./primier.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores."
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores.",
+            link: "https://parthasrikar.github.io/web_projects/p1"
         },
         {
             id: 7,
             project_title : "vid craft",
             img: "./vid-craft.png",
-            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores."
+            description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque magnam aliquam ab obcaecati aspernatur asperiores labore? Delectus nesciunt dolore fugiat, obcaecati atque illum nostrum. Sit dolorem deserunt laborum eum dolores.",
+            link: "https://parthasrikar.github.io/web_projects/sus"
         }
     ]
     
@@ -203,10 +211,12 @@ function clickproject() {
     wrapper.pause();
     project.forEach((e,idx)=> {
         e.addEventListener("click", () => {
+            let linkButton = document.querySelector("#link-btn1");
             let title = document.querySelector("#project-title");
             let imglink = document.querySelector("#wrapper-img");
             title.innerHTML = info[idx].project_title;
             imglink.src = info[idx].img;
+            linkButton.href = info[idx].link;
             inproject.style.zIndex = 10;
             wrapper.play();
         })
